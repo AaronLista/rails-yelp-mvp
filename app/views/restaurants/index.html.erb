@@ -1,0 +1,11 @@
+<h1>Restaurants</h1>
+
+<div class="row">
+  <% @restaurants.each do |restaurant| %>
+    <div class="col-4 my-1">
+      <%= link_to restaurant_path(restaurant), class: "text-decoration-none text-dark" do %>
+      <%= render "restaurant_card", restaurant: restaurant %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

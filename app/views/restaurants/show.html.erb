@@ -1,0 +1,14 @@
+<div class="mt-3">
+  <%= render "restaurant_card", restaurant: @restaurant %>
+
+  <ul class="list-group">
+    <% @restaurant.reviews.each do |review| %>
+      <li class="list-group-item">
+        <%= review.content %>
+        <%= review.rating %>/5
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to "add review", new_restaurant_review_path(@restaurant) , class: "btn btn-primary" %>
+</div>
